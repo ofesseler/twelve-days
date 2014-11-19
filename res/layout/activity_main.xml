@@ -1,0 +1,880 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:screenOrientation="portrait"
+    tools:context="${relativePackage}.${activityClass}" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_row1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="19"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="19"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="19"
+                android:gravity="center"
+                android:text="19"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="11"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="11"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="11"
+                android:gravity="center"
+                android:text="11"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="10"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="10"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="10"
+                android:gravity="center"
+                android:text="10"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="1"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="1"
+                android:gravity="center"
+                android:text="1"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_row2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="12"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="12"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="12"
+                android:gravity="center"
+                android:text="12"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="8"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="8"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="8"
+                android:gravity="center"
+                android:text="8"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="3"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="3"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="3"
+                android:gravity="center"
+                android:text="3"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="13"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="13"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="13"
+                android:gravity="center"
+                android:text="13"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_row3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="20"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="20"
+                android:gravity="center"
+                android:text="20"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="9"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="9"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="9"
+                android:gravity="center"
+                android:text="9"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="2"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="2"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="2"
+                android:gravity="center"
+                android:text="2"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="17"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="17"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="17"
+                android:gravity="center"
+                android:text="17"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_row4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="5"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="5"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="5"
+                android:gravity="center"
+                android:text="5"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="18"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="18"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="18"
+                android:gravity="center"
+                android:text="18"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="24"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="24"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="24"
+                android:gravity="center"
+                android:text="24"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="16"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="16"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="16"
+                android:gravity="center"
+                android:text="16"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_row5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="4"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="4"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="4"
+                android:gravity="center"
+                android:text="4"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="14"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="14"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="14"
+                android:gravity="center"
+                android:text="14"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="23"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="23"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="23"
+                android:gravity="center"
+                android:text="23"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="21"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="21"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="21"
+                android:gravity="center"
+                android:text="21"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_row6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="6"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="6"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="6"
+                android:gravity="center"
+                android:text="6"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="7"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="7"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="7"
+                android:gravity="center"
+                android:text="7"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="22"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="22"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="22"
+                android:gravity="center"
+                android:text="22"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/image15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="15"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/overlay15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="15"
+                android:scaleType="fitCenter"
+                android:src="@drawable/door" />
+
+            <TextView
+                android:id="@+id/number15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="15"
+                android:gravity="center"
+                android:text="15"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>
