@@ -14,19 +14,16 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
     private static final String PREFS_NAME = "twelveDaysDoors";
+    private static final String PREFIX_DOOR_PREF ="door";
     
     private static final String PREFIX_IMAGE_VIEW ="image";
     private static final String PREFIX_OVERLAY_VIEW ="overlay";
     private static final String PREFIX_NUMBER_VIEW ="number";
     
-    private static final String PREFIX_IMAGE_FILE ="image";
     private static final String PREFIX_SOUND_FILE ="sound";
     
     private static final String RESOURCE_TYPE_RAW = "raw";
     private static final String RESOURCE_TYPE_ID = "id";
-    private static final String RESOURCE_TYPE_DRAWABLE = "drawable";
-
-    private static final String PREFIX_DOOR_PREF ="door";
     
     private MediaPlayer mediaPlayer;
     private boolean doors[];
@@ -39,12 +36,13 @@ public class MainActivity extends Activity {
             final GregorianCalendar today = new GregorianCalendar();
             
             if (today.get(Calendar.MONTH) == Calendar.DECEMBER) {
-                if (today.get(Calendar.DAY_OF_MONTH) >= doorNumber) {
+               if (today.get(Calendar.DAY_OF_MONTH) >= doorNumber) {
+                    doors[doorNumber - 1] = true;
+                    
                     openDoor(doorNumber);
                     playSound(doorNumber);
-                }
-            }
-         
+              }
+           }
         }
     };
     
@@ -100,7 +98,7 @@ public class MainActivity extends Activity {
         final SharedPreferences doorPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         
         doors = new boolean[24];
-        
+
         for (int i = 0; i < doors.length; i++) {
             doors[i] = doorPreferences.getBoolean(PREFIX_DOOR_PREF + i, false);
             
@@ -113,57 +111,53 @@ public class MainActivity extends Activity {
     }
 
     private void closeDoor(final int doorNumber) {
-        final ImageView imageView = getImageView(doorNumber);
-        imageView.setVisibility(View.GONE);
-        imageView.setOnClickListener(null);  
-                
+        final TextView numberView = getNumberView(doorNumber);
         final ImageView overlayView = getOverlayView(doorNumber);
-        overlayView.setVisibility(View.VISIBLE);
-        overlayView.setImageResource(R.drawable.door);
+        final ImageView imageView = getImageView(doorNumber);
         
-        final TextView numberView = getNumberView(doorNumber);  
         numberView.setVisibility(View.VISIBLE);
         numberView.setOnClickListener(numberOnClickListener);
+        
+        overlayView.setImageResource(R.drawable.door);       
+        
+        imageView.setVisibility(View.GONE);
+        imageView.setOnClickListener(null);           
     }
     
     private void openDoor(final int doorNumber) {
-        final ImageView imageView = getImageView(doorNumber);
-        final int imageId = getResources().getIdentifier(PREFIX_IMAGE_FILE + doorNumber, RESOURCE_TYPE_DRAWABLE, getPackageName());
- 
-        imageView.setVisibility(View.VISIBLE);
-        imageView.setImageResource(imageId);
-        imageView.setOnClickListener(imageOnClickListener);  
-                
-        final ImageView overlayView = getOverlayView(doorNumber);
-        overlayView.setVisibility(View.VISIBLE);
-        overlayView.setImageResource(R.drawable.shadow);
-        
         final TextView numberView = getNumberView(doorNumber);  
+        final ImageView overlayView = getOverlayView(doorNumber);
+        final ImageView imageView = getImageView(doorNumber);
+
         numberView.setVisibility(View.GONE);
         numberView.setOnClickListener(null);
+        
+        overlayView.setImageResource(R.drawable.shadow);
+        
+        imageView.setVisibility(View.VISIBLE);
+        imageView.setOnClickListener(imageOnClickListener);  
     }
     
     /* - - - - Views - - - - - */
     
-    private ImageView getImageView(final int doorNumber) {
-        final int imageViewId = getIdentifier(PREFIX_IMAGE_VIEW + doorNumber);
-        return (ImageView) findViewById(imageViewId);
-    }
-    
+     private final TextView getNumberView(final int doorNumber) {
+        final int numberViewId = getIdentifier(PREFIX_NUMBER_VIEW + doorNumber);
+        return (TextView) findViewById(numberViewId);
+    }   
+     
     private final ImageView getOverlayView(final int doorNumber) {
         final int overlayViewId = getIdentifier(PREFIX_OVERLAY_VIEW + doorNumber);
         return (ImageView) findViewById(overlayViewId);
-    }
-    
-    private final TextView getNumberView(final int doorNumber) {
-        final int numberViewId = getIdentifier(PREFIX_NUMBER_VIEW + doorNumber);
-        return (TextView) findViewById(numberViewId);
+    }     
+     
+    private ImageView getImageView(final int doorNumber) {
+        final int imageViewId = getIdentifier(PREFIX_IMAGE_VIEW + doorNumber);
+        return (ImageView) findViewById(imageViewId);
     }
 
     private int getIdentifier(final String name) {
         return getResources().getIdentifier(name, RESOURCE_TYPE_ID, getPackageName());
     }
-    
 
     /* - - - - MediaPlayer - - - - - */
     
