@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * @author cochrane343
+ * @since 0.1
+ */
 public class MainActivity extends Activity {
     private static final String PREFS_NAME = "twelveDaysDoors";
     private static final String PREFIX_DOOR_PREF ="door";
@@ -25,23 +29,26 @@ public class MainActivity extends Activity {
     private static final String RESOURCE_TYPE_RAW = "raw";
     private static final String RESOURCE_TYPE_ID = "id";
     
+    private static final int NO_RESOURCE = 0;
+    
     private MediaPlayer mediaPlayer;
     private boolean doors[];
 
     /* - - - - - OnClickListener - - - - - */
     
     private final View.OnClickListener numberOnClickListener = new View.OnClickListener() {
-        public void onClick(final View view) {
+        public void onClick(final View view) {           
             final int doorNumber = getDoorNumber(view); 
-            final GregorianCalendar today = new GregorianCalendar();
             
-            if (today.get(Calendar.MONTH) == Calendar.DECEMBER) {
-               if (today.get(Calendar.DAY_OF_MONTH) >= doorNumber) {
-                    doors[doorNumber - 1] = true;
+            final GregorianCalendar today = new GregorianCalendar();
+            final boolean canOpenDoor = (today.get(Calendar.MONTH) == Calendar.DECEMBER) 
+               && (today.get(Calendar.DAY_OF_MONTH) >= doorNumber);
+            
+            if (canOpenDoor) {
+                doors[doorNumber - 1] = true;
                     
-                    openDoor(doorNumber);
-                    playSound(doorNumber);
-              }
+                openDoor(doorNumber);
+                playSound(doorNumber);
            }
         }
     };
@@ -90,7 +97,7 @@ public class MainActivity extends Activity {
         for (int i = 0; i < doors.length; i++) {
             editor.putBoolean(PREFIX_DOOR_PREF + i, doors[i]);
         }
-        
+       
         editor.commit();
     }
     
@@ -141,40 +148,46 @@ public class MainActivity extends Activity {
     /* - - - - Views - - - - - */
     
      private final TextView getNumberView(final int doorNumber) {
-        final int numberViewId = getIdentifier(PREFIX_NUMBER_VIEW + doorNumber);
-        return (TextView) findViewById(numberViewId);
+        final int numberViewIdentifier = getIdentifier(PREFIX_NUMBER_VIEW + doorNumber, RESOURCE_TYPE_ID);
+        return (TextView) findViewById(numberViewIdentifier);
     }   
      
     private final ImageView getOverlayView(final int doorNumber) {
-        final int overlayViewId = getIdentifier(PREFIX_OVERLAY_VIEW + doorNumber);
-        return (ImageView) findViewById(overlayViewId);
+        final int overlayViewIdentifier = getIdentifier(PREFIX_OVERLAY_VIEW + doorNumber, RESOURCE_TYPE_ID);
+        return (ImageView) findViewById(overlayViewIdentifier);
     }     
      
     private ImageView getImageView(final int doorNumber) {
-        final int imageViewId = getIdentifier(PREFIX_IMAGE_VIEW + doorNumber);
-        return (ImageView) findViewById(imageViewId);
+        final int imageViewIdentifier = getIdentifier(PREFIX_IMAGE_VIEW + doorNumber, RESOURCE_TYPE_ID);
+        return (ImageView) findViewById(imageViewIdentifier);
     }
 
-    private int getIdentifier(final String name) {
-        return getResources().getIdentifier(name, RESOURCE_TYPE_ID, getPackageName());
+    private int getIdentifier(final String name, final String resourceType) {
+        return getResources().getIdentifier(name, resourceType, getPackageName());
     }
 
     /* - - - - MediaPlayer - - - - - */
     
     private void playSound(final int doorNumber) {
-        // TODO Fallback to default sound
-        final int soundId = getResources().getIdentifier(PREFIX_SOUND_FILE + doorNumber, RESOURCE_TYPE_RAW, getPackageName());
+         int soundIdentifier = getIdentifier(PREFIX_SOUND_FILE + doorNumber, RESOURCE_TYPE_RAW);
 
-        releaseMediaPlayer();
+         if (soundIdentifier == NO_RESOURCE) {
+             /* Falling back to default sound file */
+             soundIdentifier = getIdentifier(PREFIX_SOUND_FILE , RESOURCE_TYPE_RAW);
+         }
+         
+         if (soundIdentifier != NO_RESOURCE) {
+             releaseMediaPlayer();
         
-        mediaPlayer = MediaPlayer.create(this, soundId);
-        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                releaseMediaPlayer();
-            }
-        });
-        mediaPlayer.start(); 
+             mediaPlayer = MediaPlayer.create(this, soundIdentifier);
+             mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                 @Override
+                 public void onCompletion(MediaPlayer mp) {
+                     releaseMediaPlayer();
+                 }
+             });
+             mediaPlayer.start(); 
+         }
     }
     
     private void releaseMediaPlayer() {
