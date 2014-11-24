@@ -36,6 +36,12 @@ public class MainActivity extends Activity {
 
     /* - - - - - OnClickListener - - - - - */
     
+    /**
+     * The {@link View.OnClickListener OnClickListener} for the {@link TextView TextViews}
+     * displaying the numbers of the individual doors. It opens the respective door and
+     * plays its sound, if the current date is within December and the day of the month is
+     * greater or equal to the door's number.
+     */
     private final View.OnClickListener numberOnClickListener = new View.OnClickListener() {
         public void onClick(final View view) {           
             final int doorNumber = getDoorNumber(view); 
@@ -53,6 +59,11 @@ public class MainActivity extends Activity {
         }
     };
     
+    /**
+     * The {@link View.OnClickListener OnClickListener} for the {@link ImageView ImageViews}
+     * displaying the images behind the individual doors. Plays the door's sound, so the
+     * Advent calendar can be used as a sound board.
+     */
     private final View.OnClickListener imageOnClickListener = new View.OnClickListener() {
         public void onClick(final View view) {
             final int doorNumber = getDoorNumber(view);
@@ -60,11 +71,6 @@ public class MainActivity extends Activity {
             playSound(doorNumber);
         }
     };
-    
-    private int getDoorNumber(final View view) {
-        final String contentDescription = view.getContentDescription().toString();
-        return Integer.valueOf(contentDescription);
-    }
         
     /* - - - - - Lifecycle Methods - - - - - - - - - */
     
@@ -90,6 +96,10 @@ public class MainActivity extends Activity {
 
     /* - - - - - Doors - - - - - */ 
     
+    /**
+     * Saves the current state of the doors to a {@link SharedPreferences} file,
+     * i.e. which ones are already opened and which ones are still closed.
+     */
     private void saveDoorState() {
         final SharedPreferences doorPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         final SharedPreferences.Editor editor = doorPreferences.edit();
@@ -101,6 +111,11 @@ public class MainActivity extends Activity {
         editor.commit();
     }
     
+    /**
+     * Loads the current state of the doors from a {@link SharedPreferences} file,
+     * i.e. which ones are already opened and which ones are still closed.
+     * Per default all doors are closed.
+     */
     private void loadDoorState() {
         final SharedPreferences doorPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         
@@ -117,6 +132,11 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     * Sets the closed state of an individual door, e.g. sets the {@link OnClickListener}
+     * to allow the user to open the door.
+     * @param doorNumber the number of the door to set closed (1-based)
+     */
     private void closeDoor(final int doorNumber) {
         final TextView numberView = getNumberView(doorNumber);
         final ImageView overlayView = getOverlayView(doorNumber);
@@ -131,6 +151,11 @@ public class MainActivity extends Activity {
         imageView.setOnClickListener(null);           
     }
     
+    /**
+     * Sets the closed state of an individual door, e.g. hiding the {@link TextView}
+     * displaying the number of the door.
+     * @param doorNumber the number of the door to set opened (1-based)
+     */
     private void openDoor(final int doorNumber) {
         final TextView numberView = getNumberView(doorNumber);  
         final ImageView overlayView = getOverlayView(doorNumber);
@@ -162,6 +187,15 @@ public class MainActivity extends Activity {
         return (ImageView) findViewById(imageViewIdentifier);
     }
 
+    /**
+     * @param view the number view or image view of an individual door
+     * @return the number of the respective door (1-based)
+     */
+    private int getDoorNumber(final View view) {
+        final String contentDescription = view.getContentDescription().toString();
+        return Integer.valueOf(contentDescription);
+    }
+    
     private int getIdentifier(final String name, final String resourceType) {
         return getResources().getIdentifier(name, resourceType, getPackageName());
     }
