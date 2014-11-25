@@ -1,6 +1,8 @@
 # ![Twelve Days Icon](https://raw.githubusercontent.com/cochrane343/twelve-days/master/res/drawable-mdpi/ic_launcher.png) Twelve Days of Christmas
 
-<img width="500px" style="margin:auto;" src="https://github.com/cochrane343/twelve-days/raw/master/screenshot.png" />
+A customizable Advent calendar application for Android.
+
+<img width="250px" style="margin:auto;" src="https://github.com/cochrane343/twelve-days/raw/master/screenshot.png" />
 
 ## Credits
 Application launcher icon by rduris:
